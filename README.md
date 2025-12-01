@@ -9,7 +9,7 @@ As young adults in new cities, we generally move into shared housing, needing to
 So, how can we build a reliable intelligent system that helps housemates coordinate, track, and automate household chores, groceries, meal planning, and shared errands  in a fair, transparent, and easy way?
 
 ### **Solution**
-SHAREY is a multi-agent AI system designed to help housemates coordinate and automate everyday shared-life tasks—meal planning, groceries, chores, and scheduling. Built using the Google/Kaggle Agent Development Kit (ADK), SHAREY demonstrates how specialized LLM-powered agents can collaborate to produce structured outputs and orchestrate household workflows.
+SHAREY is a multi-agent AI system designed to help housemates coordinate and automate everyday shared-life tasks; meal planning, groceries, chores, and scheduling. Built using the Google/Kaggle Agent Development Kit (ADK), SHAREY demonstrates how specialized LLM-powered agents can collaborate to produce structured outputs and orchestrate household workflows.
 
 The system includes three cooperating agents:
 
