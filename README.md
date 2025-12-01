@@ -39,10 +39,10 @@ a. Multi-agent system
 b. Tools
 c. Session & State Management
 
-### ** Running the agent **
+### **Running the agent**
 Open the notebook and run the cells in order.
 
 ### **Results**
 * Produces weekly meal plans using recipes
 * Generates grocery list
-* assigns tasks to housemates.
+* Assigns tasks to housemates.
