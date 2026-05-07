@@ -1,0 +1,22 @@
+name: Deploy & Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - run: pip install -r requirements.txt && pip install nbconvert
+    - run: jupyter nbconvert --to script 5daic25-cp-sharey.ipynb
+    - uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          5daic25-cp-sharey.py
+          README.md
