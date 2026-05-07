@@ -15,13 +15,15 @@ jobs:
       with:
         python-version: '3.10'
     
-    - name: Install dependencies (with retry)
+    - name: Install dependencies
       run: |
-        pip install --retries 5 -r requirements.txt
-        pip install --retries 5 nbconvert
+        pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install nbconvert
     
     - name: Convert notebook to Python script
       run: jupyter nbconvert --to script 5daic25-cp-sharey.ipynb
+      continue-on-error: true
     
     - name: Create Release
       uses: softprops/action-gh-release@v1
@@ -29,3 +31,5 @@ jobs:
         files: |
           5daic25-cp-sharey.py
           README.md
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
