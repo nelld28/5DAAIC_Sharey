@@ -10,12 +10,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+    
     - uses: actions/setup-python@v4
       with:
         python-version: '3.10'
-    - run: pip install -r requirements.txt && pip install nbconvert
-    - run: jupyter nbconvert --to script 5daic25-cp-sharey.ipynb
-    - uses: softprops/action-gh-release@v1
+    
+    - name: Install dependencies (with retry)
+      run: |
+        pip install --retries 5 -r requirements.txt
+        pip install --retries 5 nbconvert
+    
+    - name: Convert notebook to Python script
+      run: jupyter nbconvert --to script 5daic25-cp-sharey.ipynb
+    
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
       with:
         files: |
           5daic25-cp-sharey.py
