@@ -2,7 +2,7 @@
 *Meal Planning • Chore Coordination • Grocery Automation*
 
 ## **Project Overview**
-##Testing going on
+## Testing going on
 
 ### **Problem Statement** 
 As young adults in new cities, we generally move into shared housing, needing to save costs. Sharing spaces gets exhausting when your housemates are NOT the best organizers or candidates for the 'first time living alone' experience.
